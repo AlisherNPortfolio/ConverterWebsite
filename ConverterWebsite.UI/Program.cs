@@ -1,7 +1,15 @@
+using ConverterWebsite.Core.ConverterLibrary;
+using ConverterWebsite.Core.ServiceContracts;
+using ConverterWebsite.Core.Services;
+using ConverterWebsite.Infastructure.Repositories;
+using ConverterWebsite.Infastructure.Repositories.Contracts;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IFileRepository, FileRepository>();
+builder.Services.AddScoped<IFileConverterService, FileConverterService>();
 
 var app = builder.Build();
 
@@ -20,8 +28,6 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+app.MapControllers();
 
 app.Run();

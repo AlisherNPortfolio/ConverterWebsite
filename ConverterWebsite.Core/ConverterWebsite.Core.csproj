@@ -9,12 +9,17 @@
     <ItemGroup>
       <Folder Include="Domain\Entities\" />
       <Folder Include="Domain\RepositoryContracts\" />
-      <Folder Include="DTO\" />
       <Folder Include="Enums\" />
       <Folder Include="Exceptions\" />
       <Folder Include="Helpers\" />
-      <Folder Include="ServiceContracts\" />
-      <Folder Include="Services\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\ConverterWebsite.Infastructure\ConverterWebsite.Infastructure.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.3.0" />
     </ItemGroup>
 
 </Project>

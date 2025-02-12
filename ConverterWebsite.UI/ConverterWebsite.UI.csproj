@@ -12,4 +12,9 @@
       <Folder Include="Middleware\" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\ConverterWebsite.Core\ConverterWebsite.Core.csproj" />
+      <ProjectReference Include="..\ConverterWebsite.Infastructure\ConverterWebsite.Infastructure.csproj" />
+    </ItemGroup>
+
 </Project>

@@ -1,0 +1,14 @@
+﻿@model ConverterWebsite.Core.DTO.Requests.FileConversionRequest
+<div>
+    <h1>File Converter</h1>
+    <form asp-controller="FileConverter" asp-action="ConvertFile" method="post" enctype="multipart/form-data">
+        <input type="file" asp-for="File" />
+        <select asp-for="OutputFormat">
+            <option value="docx">DOCX</option>
+            <option value="pdf">PDF</option>
+            <option value="jpg">JPG</option>
+            <option value="png">PNG</option>
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+</div>
